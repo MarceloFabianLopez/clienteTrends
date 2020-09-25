@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import ListaBusquedas from './ListaBusquedas';
 
 class MiComponente extends Component {
     constructor(props) {
@@ -32,6 +32,8 @@ render(){
     
       <div> ya cargo...
       {this.state.data[0]['formattedDate']}
+      <ListaBusquedas  titulo="Titulo de la Lista de busquedas"
+        nuevodato={this.state.data[0]}/>
     
             
            
