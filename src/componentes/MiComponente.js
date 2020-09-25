@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import ListaBusquedas from './ListaBusquedas';
+const fechaAyer = () => {
+    let hoy = new Date();
+    let DIA_EN_MILISEGUNDOS = 24 * 60 * 60 * 1000;
+    let ayer = new Date(hoy.getTime() - DIA_EN_MILISEGUNDOS);
+    return ayer;
+};
 
 class MiComponente extends Component {
     constructor(props) {
@@ -31,11 +37,13 @@ render(){
    
     
       <div> ya cargo...
-      {this.state.data[0]['formattedDate']}
+    
       <ListaBusquedas  titulo="Titulo de la Lista de busquedas"
         nuevodato={this.state.data[0]}/>
+        
+      <ListaBusquedas  titulo="Titulo de la Lista de busquedas"
+        nuevodato={this.state.data[1]}/>
     
-            
            
      </div>
     )    
