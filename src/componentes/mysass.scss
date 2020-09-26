@@ -2,6 +2,8 @@ $fondo: white;
 $fondoPizarra : rgba(217, 235, 235, 0.979);
 $fondoCard : white;
 $colorTitulos :rgb(63, 5, 5);
+$colorTitulosArticulos :rgb(31, 3, 3);
+$fondoTitulosArticulos : white;
 $colorCopete : black;
 $fondoArt :rgb(171, 219, 219);
 $fondoTarjeta : pink;
@@ -36,8 +38,8 @@ h1 {
 
 }
 .estiloArticulo {
-   width: 200px;
-    padding : 20px;
+   width: 150px;
+    padding : 0px;
     background-color :$fondoArt;
     display: flex;
     flex-wrap: wrap;
@@ -45,8 +47,18 @@ h1 {
     
 
 }
+.enlaceMedios {
+    font-size: 15px;
+}
+ .tituloArticulo {
+     color : $colorTitulosArticulos;
+     background-color :$fondoTitulosArticulos;
+     font-size: 15px;
+
+
+}
 .estiloArticulo {
-    font-size: 20px;
+    font-size: 15px;
     color:$colorTitulos;
 
 }
