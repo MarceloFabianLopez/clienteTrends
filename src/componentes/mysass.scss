@@ -7,6 +7,7 @@ $fondoTitulosArticulos : white;
 $colorCopete : black;
 $fondoArt :rgb(171, 219, 219);
 $fondoTarjeta : pink;
+$fondoBody : rgb(209, 83, 83);
 h1 {
   color: $colorTitulos;
 }
@@ -16,9 +17,9 @@ h1 {
     padding :20px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
-    height: 200px;
-  align-content: space-between;
+    flex-direction: row;
+    
+  align-content: normal;
   }
 
   .pizarraNoticias{ 
@@ -68,4 +69,8 @@ h1 {
 }
 .colorHeader {
     background-color:red;
+}
+.estiloBody {
+
+    background-color: $fondoBody;
 }

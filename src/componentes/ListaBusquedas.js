@@ -1,16 +1,8 @@
 import React from 'react';
-import CardArticle from './CardArticle';
-//import CardGroup from 'react-bootstrap/CardGroup';
-//import Container from 'react-bootstrap/Container';
-//import CardDeck from 'react-bootstrap/CardDeck';
-//import JSONViewer from 'react-json-viewer';
-
-
-
-
-
-
-
+import CardNoticia from './CardNoticia';
+import ListGroupItem from 'react-bootstrap/ListGroupItem';
+import ListGroup from 'react-bootstrap/ListGroup';
+import { Container } from 'react-bootstrap';
 
 class ListaBusquedas extends React.Component {
     constructor(props) {
@@ -28,29 +20,34 @@ class ListaBusquedas extends React.Component {
             if (arreglo) {
                 console.log("areglando",arreglo);
             return (
-                <div>
+            <div>
                 <div>Dia {arreglo['formattedDate']}</div>
-            <div className="pizarraNoticias">
-                
-                 
-                
-                {
+                <div className="box">
+                         
+                        
+                        
+
+                            {
                
-                      arreglo.trendingSearches.map((trendingSearch,i)=>{
-                                        return ( <CardArticle titulo={trendingSearch.title.query} key={i} enlace={trendingSearch.image.newsUrl} 
+                            arreglo.trendingSearches.map((trendingSearch,i)=>{
+                                        return (
+                                            
+
+                                            <CardNoticia titulo={trendingSearch.title.query} key={i} enlace={trendingSearch.image.newsUrl} 
                                             imagen={trendingSearch.image.imageUrl} 
                                             copete={trendingSearch.articles[0].snippet} 
-                                            articulosRelacionados={trendingSearch.articles}/>);
+                                            articulosRelacionados={trendingSearch.articles}/>
+                                            
+                                            );
+                                            
 
                                         })
-    
-
                  
-                }
-                
+                             }
+       
+                      
                 </div>
                 </div>
-    
                 );
 
 

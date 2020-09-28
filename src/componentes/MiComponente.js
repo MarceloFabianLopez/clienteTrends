@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ListaBusquedas from './ListaBusquedas';
+import Spinner from 'react-bootstrap/Spinner'
+import { Container } from "react-bootstrap";
 
 class MiComponente extends Component {
     constructor(props) {
@@ -26,7 +28,7 @@ class MiComponente extends Component {
 render(){
 
     console.log("aca");
-    return this.state.data == null ?(<div>Cargando.......</div>)
+    return this.state.data == null ?(<div><Spinner animation="border" /></div>)
     : (
    
     
@@ -34,11 +36,12 @@ render(){
           {this.state.data.map((undato,i)=> {
               return (
                   <div key={i}>
+                    <Container fluid>  
                       {/*{undato['formattedDate']}*/}
                       {console.log('data',this.state.data)}
                       <ListaBusquedas  titulo="Titulo de la Lista de busquedas"
                         nuevodato={undato}/>
-
+                    </Container>
                   </div>
               );
           })}
