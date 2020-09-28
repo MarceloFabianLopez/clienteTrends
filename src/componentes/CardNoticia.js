@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-import Container from 'react-bootstrap/Container';
+//import Container from 'react-bootstrap/Container';
 
 import './mysass.scss';
 class CardNoticia extends React.Component {
@@ -22,6 +22,8 @@ class CardNoticia extends React.Component {
                 
                   
                     <Card.Text>{this.props.copete}</Card.Text>
+                    <Card.Link href={ this.props.articulosRelacionados[0].url ? this.props.articulosRelacionados[0].url:"#"}
+                       target="_blank" rel="noopener noreferrer">{ this.props.articulosRelacionados[0].source ? this.props.articulosRelacionados[0].source:"#"}</Card.Link>
                     
                   </Card>
               

@@ -1,9 +1,9 @@
 import React from 'react';
 import CardNoticia from './CardNoticia';
-import ListGroupItem from 'react-bootstrap/ListGroupItem';
+/* import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Container } from 'react-bootstrap';
-
+ */
 class ListaBusquedas extends React.Component {
     constructor(props) {
         super(props)
