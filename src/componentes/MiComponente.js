@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import ListaBusquedas from './ListaBusquedas';
 import Spinner from 'react-bootstrap/Spinner'
 import { Container } from "react-bootstrap";
-function myTimeout1() {
+/* function myTimeout1() {
     document.getElementById("root").innerHTML = "Cargando...";
-  }
+  } */
 class MiComponente extends Component {
     constructor(props) {
         super(props);
