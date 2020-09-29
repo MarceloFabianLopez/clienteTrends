@@ -35,7 +35,8 @@ class ListaBusquedas extends React.Component {
 
                                             <CardNoticia titulo={trendingSearch.title.query} key={i} enlace={trendingSearch.image.newsUrl} 
                                             imagen={trendingSearch.image.imageUrl} 
-                                            copete={trendingSearch.articles[0].snippet} 
+                                            trafico={trendingSearch.formattedTraffic}
+                                            fuente={trendingSearch.image.source}
                                             articulosRelacionados={trendingSearch.articles}/>
                                             
                                             );

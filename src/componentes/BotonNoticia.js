@@ -5,16 +5,18 @@ import NoticiaCompleta from './NoticiaCompleta'
 function simulateNetworkRequest() {
     console.log("tardando....");
     
-    return new Promise((resolve) => setTimeout(resolve, 2000));
+    return new Promise((resolve) => setTimeout(resolve, 9000));
 
   }
-  function noticia() {
-    console.log('noticia');
-    return(<div><NoticiaCompleta/></div>);
+  /* function miArticulo() {
+      const [articulo,setArticulo]= useState(null);
+    console.log('articulo para noticia');
+    
+    return(articulo);
       
-  }
+  } */
   
-  function LoadingButton() {
+  function LoadingButton(props) {
     const [isLoading, setLoading] = useState(false);
   
     useEffect(() => {
@@ -35,17 +37,19 @@ function simulateNetworkRequest() {
         disabled={isLoading}
         onClick={!isLoading ? handleClick : null}
       >
-        {isLoading ? 'Cargando…' : 'Click para ver'}
+        {isLoading ? 'Cargando…' : 'Ver'}
       </Button>
-      {isLoading ? <NoticiaCompleta titulo='titulo' fuente='fuente' copete='copete'/> :''}
+      {isLoading ? <NoticiaCompleta articulos={props.articulos} /> :''}
       </>
     );
   }
 export default class BotonNoticia extends Component {
     render() {
+      //let art=props.articulos;
+        console.log('dentro render boton noticia',this.props.articulos);
         return (
             <div>
-                <LoadingButton />
+                <LoadingButton articulos={this.props.articulos} />
             </div>
         )
     }

@@ -21,9 +21,11 @@ class CardNoticia extends React.Component {
                     <Card.Img variant="top" src={ this.props.articulosRelacionados[0].image ? this.props.articulosRelacionados[0].image.imageUrl:"/nodisponible.png"}/>
                 
                   
-                    <Card.Text>{this.props.copete}</Card.Text>
+                    <Card.Text>Tráfico:{this.props.trafico}<br/>
+                    Artículos : {this.props.articulosRelacionados.length}
+                    </Card.Text>
                     
-                    <BotonNoticia/>
+                    <BotonNoticia articulos={this.props.articulosRelacionados} />
                     
                     
                       

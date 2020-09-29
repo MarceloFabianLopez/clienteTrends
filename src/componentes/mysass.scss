@@ -8,6 +8,15 @@ $colorCopete : black;
 $fondoArt :rgb(171, 219, 219);
 $fondoTarjeta : pink;
 $fondoBody : rgb(209, 83, 83);
+
+.toast-body {
+    background-color: #4ff;
+}
+.estiloToast {
+    background-color: #fff;
+    padding: 20px;
+}
+
 h1 {
   color: $colorTitulos;
 }

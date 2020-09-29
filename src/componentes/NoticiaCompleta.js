@@ -1,29 +1,41 @@
 import React, { Component } from 'react';
 import Toast from 'react-bootstrap/Toast';
-import Container from 'react-bootstrap/Container';
+import ToastHeader from 'react-bootstrap/ToastHeader';
+import ToastBody from 'react-bootstrap/ToastBody'
+//import Container from 'react-bootstrap/Container';
 export default class NoticiaCompleta extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
+    
     
     render() {
-        return (
-            <div>
-     <Container>
-  <Toast>
-    <Toast.Header>
-      <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
-        <strong className="mr-auto">{this.props.titulo}</strong>
-      <small>{this.props.fuente}</small>
-    </Toast.Header>
-    <Toast.Body>{this.props.copete}</Toast.Body>
-  </Toast>
-  </Container>           
-  
-    
+        console.log(this.props.articulos);
+            return (
+                
+            this.props.articulos.map((articulo,i) => {
+                console.log('titulo:',articulo.title);
+                                                    return(
+                                                        
+                                                            <div key={i}>
+                                            
+                                             <Toast >
+                                                    <ToastHeader closeButton={false}>
+                                                    <img src={articulo.image.imageUrl} alt="#" />
+                                                         
+                                                        </ToastHeader>
+                                                        <ToastBody className="estiloToast">
+                                                        {articulo.title}<br/>
+                                                        {/* <small>{articulo.snippet}</small> */}
+                                                        <a href={articulo.url}>
+                                                        { articulo.image.source ? articulo.image.source: "#"}</a>
+                                                        </ToastBody>
 
-            </div>
-        )
+                                            </Toast>
+                                                    
+                                                            </div>
+                                                            );
+                                                        }
+                                        )
+            )
+            }
+                
     }
-}
+
