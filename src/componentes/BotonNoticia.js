@@ -1,5 +1,5 @@
-import React, { Component,useState,useEffect } from 'react'
-import Button from 'react-bootstrap/Button';
+import React, { Component,useState,useEffect,Fragment} from 'react'
+import {Button} from 'react-bootstrap';
 //import React, { useState } from 'react';
 import NoticiaCompleta from './NoticiaCompleta'
 function simulateNetworkRequest() {
@@ -31,16 +31,18 @@ function simulateNetworkRequest() {
     const handleClick = () => setLoading(true);
   
     return (
-        <>
+        <Fragment>
+        
       <Button
-        variant="primary"
+        variant="info"
+        size ="sm"
         disabled={isLoading}
         onClick={!isLoading ? handleClick : null}
       >
-        {isLoading ? 'Cargando…' : 'Ver'}
+        {isLoading ? 'Articulos' : 'Ver'}
       </Button>
       {isLoading ? <NoticiaCompleta articulos={props.articulos} /> :''}
-      </>
+      </Fragment>
     );
   }
 export default class BotonNoticia extends Component {

@@ -27,7 +27,7 @@ h2 {
 .box {
     background-color: $fondo; 
     
-    padding :20px;
+    padding :10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -38,7 +38,7 @@ h2 {
   .pizarraNoticias{ 
       
       background-color: $fondoPizarra;
-      padding: 20px; 
+      padding: 10px; 
       display :flex;
       flex-wrap: wrap;
     flex-direction: row;
@@ -46,14 +46,14 @@ h2 {
 
 .estiloTarjeta {
     width: 450px;
-    padding : 15px;
+    padding : 10px;
     background-color :$fondoTarjeta,
 
 
 }
 .estiloArticulo {
-   width: 150px;
-    padding : 0px;
+   width: 250px;
+    padding : 10px;
     background-color :$fondoArt;
     display: flex;
     flex-wrap: wrap;
