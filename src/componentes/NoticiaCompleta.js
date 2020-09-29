@@ -24,7 +24,7 @@ export default class NoticiaCompleta extends Component {
                                                         <ToastBody className="estiloToast">
                                                         {articulo.title}<br/>
                                                         {/* <small>{articulo.snippet}</small> */}
-                                                        <a href={articulo.url}>
+                                                        <a href={articulo.url} target='_blank' rel="noopener noreferrer">
                                                         { articulo.image.source ? articulo.image.source: "#"}</a>
                                                         </ToastBody>
 
