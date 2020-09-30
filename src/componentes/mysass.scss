@@ -5,12 +5,15 @@ $colorTitulos :rgb(63, 5, 5);
 $colorTitulosArticulos :rgb(22, 19, 19);
 $fondoTitulosArticulos : white;
 $colorCopete : black;
-$fondoArt :rgb(171, 219, 219);
+$fondoArt :rgb(61, 87, 13);
 $fondoTarjeta : pink;
 $fondoBody : rgb(209, 83, 83);
 $colorEncabezado: white;
 $fondoTostada:rgb(236, 213, 213);
-
+.estiloDetalle {
+    
+    background-color:$fondoArt;
+}
 .estiloImagen{
     width: 100%;
   height: auto;

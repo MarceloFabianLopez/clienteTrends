@@ -41,7 +41,7 @@ function simulateNetworkRequest() {
       >
         {isLoading ? 'Articulos' : 'Ver'}
       </Button>
-      {isLoading ? <NoticiaCompleta articulos={props.articulos} /> :''}
+      {isLoading ?<div className="estiloDetalle"> <NoticiaCompleta articulos={props.articulos} /></div> :''}
       </Fragment>
     );
   }

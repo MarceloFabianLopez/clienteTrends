@@ -39,20 +39,25 @@ class CardNoticia extends React.Component {
       //console.log('en',this.props.titulo);
       //console.log('imag correcta:',dameIndiceImagen(this.props.articulosRelacionados));
       let indice = dameIndiceImagen(this.props.articulosRelacionados);
-      
+      let resumido=this.props.articulosRelacionados[0].snippet.replace(/&quot;|&#39;/g,'"');
+      resumido=resumido.substr(0,80)+'...';
+      //titulo=articulo.title.replace(/&quot;/g,'"');
+        //        titulo=titulo.replace(/&#39;/g,"'");
       let unaImagen= indice!==-1 ? this.props.articulosRelacionados[indice].image.imageUrl:"/nodisponible.png";
       return ( 
-                <Card style={{ width: '10rem' }}>
+                <Card style={{ width: '9rem' }}>
                     <Card.Header>
-                        <div className="tituloArticulo">
-                        {this.props.titulo}
-                        </div>
+                    {this.props.trafico}
                     </Card.Header>
                     <Card.Img variant="top" src={ unaImagen?unaImagen:"/nodisponible.png"} alt="#"/>
                 
-                  
-                    <Card.Text>Tráfico:{this.props.trafico}<br/>
+                    <div className="tituloArticulo">
+                        {this.props.titulo.replace(/&quot;|&#39;/g,'"')}
+                        </div>
+                    <Card.Text>
+                    <small>{resumido}</small><br/>
                     Artículos : {this.props.articulosRelacionados.length}
+      
                     </Card.Text>
                     
                     <BotonNoticia articulos={this.props.articulosRelacionados} />
