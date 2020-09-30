@@ -18,7 +18,7 @@ class ListaBusquedas extends React.Component {
         arreglo=this.props.nuevodato;
 
             if (arreglo) {
-                console.log("areglando",arreglo);
+                //console.log("areglando",arreglo);
             return (
             <div>
                 <div>Dia {arreglo['formattedDate']}</div>

@@ -3,7 +3,7 @@ import {Button} from 'react-bootstrap';
 //import React, { useState } from 'react';
 import NoticiaCompleta from './NoticiaCompleta'
 function simulateNetworkRequest() {
-    console.log("tardando....");
+   // console.log("tardando....");
     
     return new Promise((resolve) => setTimeout(resolve, 9000));
 
@@ -48,7 +48,7 @@ function simulateNetworkRequest() {
 export default class BotonNoticia extends Component {
     render() {
       //let art=props.articulos;
-        console.log('dentro render boton noticia',this.props.articulos);
+        //console.log('dentro render boton noticia',this.props.articulos);
         return (
             <div>
                 <LoadingButton articulos={this.props.articulos} />

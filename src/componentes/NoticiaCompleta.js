@@ -7,32 +7,28 @@ export default class NoticiaCompleta extends Component {
     
     
     render() {
-        console.log(this.props.articulos);
+        //console.log(this.props.articulos);
             return (
                 
             this.props.articulos.map((articulo,i) => {
-                console.log('titulo:',articulo.title);
-                                                    return(
-                                                        
-                                                            <div key={i}>
-                                            
-                                             <Toast >
-                                                    <ToastHeader closeButton={false}>
-                                                    <img src={articulo.image.imageUrl} alt="#" />
-                                                         
-                                                        </ToastHeader>
-                                                        <ToastBody className="estiloToast">
-                                                        {articulo.title}<br/>
-                                                        {/* <small>{articulo.snippet}</small> */}
-                                                        <a href={articulo.url} target='_blank' rel="noopener noreferrer">
-                                                        { articulo.image.source ? articulo.image.source: "#"}</a>
-                                                        </ToastBody>
+          //      console.log('titulo:',articulo.title);
+               return(
+                <div key={i}>
+                    <Toast >
+                    <ToastHeader closeButton={false}>
+                    <img src={articulo.image ? articulo.image.imageUrl :"/nodisponible.png"} alt="#" className="estiloImagen"/>
+                    </ToastHeader>
+                    <ToastBody className="estiloToast">
+                    {articulo.title}<br/>
+                    {/* <small>{articulo.snippet}</small> */}
+                    <a href={articulo.url} target='_blank' rel="noopener noreferrer">
+                    { articulo.image ? articulo.image.source: articulo.source}</a>
+                    </ToastBody>
+                    </Toast>
+                </div>
+                        );
+        }
 
-                                            </Toast>
-                                                    
-                                                            </div>
-                                                            );
-                                                        }
                                         )
             )
             }

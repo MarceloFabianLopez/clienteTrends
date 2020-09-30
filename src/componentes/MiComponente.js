@@ -25,12 +25,12 @@ class MiComponente extends Component {
 
     componentDidMount() {
         this.callAPI();
-        console.log('data',this.state.data);
+        //console.log('data',this.state.data);
     }
 
 render(){
 
-    console.log("aca");
+    //console.log("aca");
     return this.state.data == null ?(<div>
         Cargando ....
         <Spinner animation="border" /></div>)
@@ -43,7 +43,7 @@ render(){
                   <div key={i}>
                     <Container fluid>  
                       {/*{undato['formattedDate']}*/}
-                      {console.log('data',this.state.data)}
+              {/*console.log('data',this.state.data)*/}
                       <ListaBusquedas  titulo="Titulo de la Lista de busquedas"
                         nuevodato={undato}/>
                     </Container>

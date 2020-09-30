@@ -9,11 +9,17 @@ $fondoArt :rgb(171, 219, 219);
 $fondoTarjeta : pink;
 $fondoBody : rgb(209, 83, 83);
 $colorEncabezado: white;
+$fondoTostada:rgb(236, 213, 213);
+
+.estiloImagen{
+    width: 100%;
+  height: auto;
+}
 .toast-body {
     background-color: #4ff;
 }
 .estiloToast {
-    background-color: #fff;
+    background-color: $fondoTostada;
     padding: 20px;
 }
 
@@ -45,7 +51,7 @@ h2 {
     }
 
 .estiloTarjeta {
-    width: 450px;
+    width: 250px;
     padding : 10px;
     background-color :$fondoTarjeta,
 
