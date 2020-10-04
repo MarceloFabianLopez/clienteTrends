@@ -9,14 +9,19 @@ class MiComponente extends Component {
     constructor(props) {
         super(props);
         this.state = { apiResponse: "nada" ,
-    data:null
+    data:null,
+    urldaily:"https://still-plains-00092.herokuapp.com/daily",
+    urlrealtime:"https://still-plains-00092.herokuapp.com/realtime",
+    localhotsdaily : 'http://192.168.0.9:5000/daily',
+    localhotsrealtime : 'http://192.168.0.9:5000/realtime',
+    
     };
     }
 
-    callAPI() {
+    callAPI(unaurl) {
         //fetch("http://192.168.0.9:5000/daily")
         //setTimeout(myTimeout1,4000);
-        fetch("https://still-plains-00092.herokuapp.com/daily")
+        fetch(unaurl)
         .then(response => response.json())
         .then(data => this.setState({ data }))
            
@@ -24,7 +29,7 @@ class MiComponente extends Component {
     }
 
     componentDidMount() {
-        this.callAPI();
+        this.callAPI(this.state.urldaily);
         //console.log('data',this.state.data);
     }
 

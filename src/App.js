@@ -1,7 +1,7 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import MiComponente from './componentes/MiComponente'
+import MiComponente from './componnents/MiComponente'
 function App() {
   return (
     <div className="App">
