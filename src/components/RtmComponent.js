@@ -8,7 +8,7 @@ export default class RtmComponent extends Component {
         let unabusqueda=this.props.busqueda;
         let articulos = this.props.busqueda.articles;
         return (
-        <Card style={{ width: '24rem' }}>
+        <Card style={{ width: '9rem' }}>
             <Card.Img variant="top" src={unabusqueda.image.imgUrl} />
             <Card.Body>
                 <Card.Title>{unabusqueda.title.replace(/&quot;|&#39;/g,'"')}</Card.Title>
@@ -19,17 +19,14 @@ export default class RtmComponent extends Component {
             </Card.Body>
             <ListGroup className="list-group-flush">
                 {articulos.map((articulo,i) => {
-                   return  <ListGroupItem key={i}>{articulo.articleTitle.replace(/&quot;|&#39;/g,'"')}
-                   <a href={articulo.url} rel="noopener noreferrer" target="_blank">Ver</a>
+                   return  <ListGroupItem key={i}><small>{articulo.articleTitle.replace(/&quot;|&#39;/g,'"')}</small>
+                   <br/><a href={articulo.url} rel="noopener noreferrer" target="_blank">Ver</a>
                    </ListGroupItem>
 
                 })}
                 
             </ListGroup>
-            <Card.Body>
-                <Card.Link href="#">Ver</Card.Link>
-               
-            </Card.Body>
+            
         </Card>
         )
     }

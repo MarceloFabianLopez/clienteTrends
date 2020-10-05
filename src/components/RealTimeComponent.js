@@ -19,18 +19,20 @@ var RealTimeComponent = createReactClass({
      if (this.state.realtimestore) {
        return (
          <div>
+           <Container fluid>  
               <h4>Realtimetrends</h4>
              
-             
+             <div className="box">
               { this.state.realtimestore.map((a,i) => {
-                      return  <div className='box'key={i}>
+                      return  <div key={i}>
                         <RtmComponent busqueda={a}/>
                         </div>
                         })               
               }
              
               </div>
-          
+              </Container>
+          </div>
       )
       }
      
