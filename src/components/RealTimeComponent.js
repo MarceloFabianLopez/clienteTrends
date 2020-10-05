@@ -1,6 +1,8 @@
 import React from 'react';
 import Reflux from 'reflux';
 import RealTimeStore from '../stores/RealTimeStore';
+import RtmComponent from './RtmComponent';
+import Container from 'react-bootstrap/Container';
 //import TituloRealtime from './TituloRealtime';
 //import Container from 'react-bootstrap/Container';
 //import { Container } from "react-bootstrap"
@@ -17,28 +19,18 @@ var RealTimeComponent = createReactClass({
      if (this.state.realtimestore) {
        return (
          <div>
-         <h4>Adentroooo</h4>
-
-       { this.state.realtimestore.map((a,i) => {
-       return   <div key={i}>
-                  <h5>{a.title}</h5>
-                  <ul>
-                  {a.articles.map((articulo,indice)=>{
-                    return <li key={indice}>
-                    {articulo.articleTitle}</li>
-                  })
-                  
-                
-                }
-                </ul>
-                </div>
-
-       
-                    
-             }
-                  )               
-       }
-       </div>
+              <h4>Realtimetrends</h4>
+             
+             
+              { this.state.realtimestore.map((a,i) => {
+                      return  <div className='box'key={i}>
+                        <RtmComponent busqueda={a}/>
+                        </div>
+                        })               
+              }
+             
+              </div>
+          
       )
       }
      

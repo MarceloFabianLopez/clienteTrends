@@ -4,7 +4,7 @@ import './App.css';
 import MiComponente from './components/MiComponente';
 import RealTimeComponent from './components/RealTimeComponent'
 import {Container} from 'react-bootstrap';
-import TituloRealtime from './components/TituloRealtime';
+//import TituloRealtime from './components/TituloRealtime';
 
 function App() {
   return (
@@ -16,14 +16,14 @@ function App() {
       
       </header>
       
-      <TituloRealtime titulo="afuera"/>
+      
         <MiComponente/>
         <hr/>
-        <h1>Realtime</h1>
-        <Container className="box">
-          <TituloRealtime titulo="afuera"/>
+        <h1>Tendencias momentaneas en tiempo real</h1>
+        
+          
         <RealTimeComponent/>
-        </Container>
+        
         <hr/>
         
      
