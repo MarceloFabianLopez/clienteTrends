@@ -1,3 +1,4 @@
+/* esta version era la master hasta commit sin reflux*/
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
