@@ -1,7 +1,11 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import MiComponente from './componnents/MiComponente'
+import MiComponente from './components/MiComponente';
+import RealTimeComponent from './components/RealTimeComponent'
+import {Container} from 'react-bootstrap';
+import TituloRealtime from './components/TituloRealtime';
+
 function App() {
   return (
     <div className="App">
@@ -12,8 +16,15 @@ function App() {
       
       </header>
       
-        
+      <TituloRealtime titulo="afuera"/>
         <MiComponente/>
+        <hr/>
+        <h1>Realtime</h1>
+        <Container className="box">
+          <TituloRealtime titulo="afuera"/>
+        <RealTimeComponent/>
+        </Container>
+        <hr/>
         
      
     </div>
