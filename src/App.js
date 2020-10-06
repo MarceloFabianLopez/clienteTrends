@@ -2,7 +2,8 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import MiComponente from './components/MiComponente';
-import RealTimeComponent from './components/RealTimeComponent'
+import RealTimeComponent from './components/RealTimeComponent';
+import DailyComponent from './components/DailyComponent';
 import {Container} from 'react-bootstrap';
 //import TituloRealtime from './components/TituloRealtime';
 
@@ -17,7 +18,9 @@ function App() {
       </header>
       
       
-        <MiComponente/>
+        {/* <MiComponente/> */}
+        <DailyComponent/>
+
         <hr/>
         <h1>Tendencias momentaneas en tiempo real</h1>
         
