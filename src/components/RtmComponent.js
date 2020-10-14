@@ -11,7 +11,7 @@ export default class RtmComponent extends Component {
         <Card style={{ width: '9rem' }}>
             <Card.Img variant="top" src={unabusqueda.image.imgUrl} />
             <Card.Body>
-                <Card.Title>{unabusqueda.title.replace(/&quot;|&#39;/g,'"')}</Card.Title>
+                <Card.Title>{unabusqueda.entityNames[0].replace(/&quot;|&#39;/g,'"')}</Card.Title>
                 <Card.Text>
                 {unabusqueda.source}
                 {unabusqueda.time}
@@ -20,7 +20,7 @@ export default class RtmComponent extends Component {
             <ListGroup className="list-group-flush">
                 {articulos.map((articulo,i) => {
                    return  <ListGroupItem key={i}><small>{articulo.articleTitle.replace(/&quot;|&#39;/g,'"')}</small>
-                   <br/><a href={articulo.url} rel="noopener noreferrer" target="_blank">Ver</a>
+                   <br/><a href={articulo.url} rel="noopener noreferrer" target="_blank">{articulo.source.replace(/&quot;|&#39;/g,'"')}</a>
                    </ListGroupItem>
 
                 })}
