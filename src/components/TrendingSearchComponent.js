@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Card } from 'react-bootstrap';
-import ListGroupItem from 'react-bootstrap/ListGroupItem';
-import ListGroup from 'react-bootstrap/ListGroup';
+//import { Card } from 'react-bootstrap';
+//import ListGroupItem from 'react-bootstrap/ListGroupItem';
+//import ListGroup from 'react-bootstrap/ListGroup';
 
 export default class TrendingSearchComponent extends Component {
 render() {
