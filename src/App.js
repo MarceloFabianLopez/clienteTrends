@@ -1,10 +1,10 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-//import MiComponente from './components/MiComponente';
+import MiComponente from './components/MiComponente';
 import RealTimeComponent from './components/RealTimeComponent';
 import DailyComponent from './components/DailyComponent';
-//import {Container} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 //import TituloRealtime from './components/TituloRealtime';
 
 function App() {
