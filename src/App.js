@@ -6,7 +6,7 @@ import RealTimeComponent from './components/RealTimeComponent';
 import DailyComponent from './components/DailyComponent';
 import {Container} from 'react-bootstrap';
 //import TituloRealtime from './components/TituloRealtime';
-
+// arreglado estilo y desacople de head en git 
 function App() {
   return (
     <div className="App">
