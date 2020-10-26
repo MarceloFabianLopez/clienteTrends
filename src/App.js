@@ -5,20 +5,19 @@ import MiComponente from './components/MiComponente';
 import RealTimeComponent from './components/RealTimeComponent';
 import DailyComponent from './components/DailyComponent';
 import {Container} from 'react-bootstrap';
+import HeaderComponent from './components/HeaderComponent';
 //import TituloRealtime from './components/TituloRealtime';
 // arreglado estilo y desacople de head en git 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h2>Tendenciero</h2>
-             
+       <HeaderComponent title="Tendenciero" logo="logo.png"/>
       
       </header>
       
       
-        {/* <MiComponente/> */}
+        
         <DailyComponent/>
 
         <hr/>

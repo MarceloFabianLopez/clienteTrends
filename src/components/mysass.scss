@@ -1,4 +1,6 @@
 $fondo: cyan;
+$fondoHeader : black;
+$headerTexto : white;
 $fondoPizarra : rgba(217, 235, 235, 0.979);
 $fondoCard : white;
 $colorTitulos :rgb(63, 5, 5);
@@ -10,6 +12,10 @@ $fondoTarjeta : pink;
 $fondoBody : rgb(209, 83, 83);
 $colorEncabezado: white;
 $fondoTostada:rgb(236, 213, 213);
+.headerClass {
+   background-color: $fondoHeader;
+   color: $headerTexto; 
+}
 .estiloDetalle {
     
     background-color:$fondoArt;

@@ -20,6 +20,7 @@ var DailyComponent = createReactClass({
              <div className="box">
               { this.state.dailystore.map((a,i) => {// mapea los dias
                       return  <div key={i}>
+                        {a.formattedDate}
                         <TrendingSearchComponent cadadia={a}/>
                         </div>
                         })               

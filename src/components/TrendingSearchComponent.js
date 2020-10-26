@@ -11,7 +11,7 @@ render() {
         return ( 
          
             <div>
-                {busquedas.formattedDate}
+                
                 {busquedas.trendingSearches.map((trendingSearch,i) => {
                         console.log('una:',trendingSearch.articles);
                 return (<div key={i}>
