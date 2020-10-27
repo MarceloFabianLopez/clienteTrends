@@ -3,7 +3,8 @@ import Reflux from 'reflux';
 import DailyStore from '../stores/DailyStore';
 import TrendingSearchComponent from './TrendingSearchComponent';
 import Container from 'react-bootstrap/Container';
-
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 var createReactClass = require('create-react-class');
 
 var DailyComponent = createReactClass({
@@ -17,15 +18,23 @@ var DailyComponent = createReactClass({
            <Container fluid>  
               <h4>Daylytrends</h4>
              
-             <div className="box">
+             
+             <CardGroup>
               { this.state.dailystore.map((a,i) => {// mapea los dias
                       return  <div key={i}>
+                        {a.formattedDate}
+         
+            
                         <TrendingSearchComponent cadadia={a}/>
+                        
+                       
                         </div>
-                        })               
+                        })
+                        
               }
+              </CardGroup>               
              
-              </div>
+              
               </Container>
           </div>
       )

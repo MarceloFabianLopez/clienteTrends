@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 //import ListGroupItem from 'react-bootstrap/ListGroupItem';
 //import ListGroup from 'react-bootstrap/ListGroup';
 
@@ -10,16 +10,34 @@ render() {
         console.log('busquedas del dia :',busquedas.trendingSearches);
         return ( 
          
-            <div>
-                {busquedas.formattedDate}
+            <div className='box'>
+              
                 {busquedas.trendingSearches.map((trendingSearch,i) => {
                         console.log('una:',trendingSearch.articles);
                 return (<div key={i}>
-                    <div>{trendingSearch.title.query}</div>
-                    {trendingSearch.articles.map((article,j) => {
-                        console.log('titulo articulo',article.title);
-                    return <div key={j}>{article.title}</div>
-                    })}
+                        <Card  border="light" style={{ width: '12rem' }}>
+                        <Card.Img variant="top" src={trendingSearch.image.imageUrl} />
+                        <Card.Body>
+                        <Card.Title>{trendingSearch.title.query}</Card.Title>
+                        <Card.Text>
+                            {trendingSearch.articles[0].title}
+                        {/* {trendingSearch.articles.map((article,j) => {
+                       
+                                return <div key={j}>{article.source}</div>
+                                })} */}
+                        </Card.Text>
+                        </Card.Body>
+                            <Card.Link href={trendingSearch.shareUrl}>Ver</Card.Link>
+                        <Card.Footer>
+                            <small className="text-muted">{trendingSearch.formattedTraffic}</small>
+                        </Card.Footer>
+                        </Card>
+
+
+
+
+                   
+              
                     </div>
                 )
                 })}
