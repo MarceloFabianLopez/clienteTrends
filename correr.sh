@@ -1,7 +1,6 @@
 #!/bin/bash
 
+#indiolopez/nodejs-tendenciero
+docker rm -f $(docker ps -aq)
+docker run -p 80:3000 -d -it indiolopez/nodejs-tendenciero:v1.1
 
-docker run --name tendenciero --rm \
--p 80:80 \
--e INSTANCE_NAME=tendenciero \
-tendenciero
