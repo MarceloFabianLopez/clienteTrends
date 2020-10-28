@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 //import ListGroupItem from 'react-bootstrap/ListGroupItem';
 //import ListGroup from 'react-bootstrap/ListGroup';
-
+import CarouselComponent from './CarouselComponent';
 export default class TrendingSearchComponent extends Component {
 render() {
         let busquedas=this.props.cadadia;
@@ -21,10 +21,16 @@ render() {
                         <Card.Title>{trendingSearch.title.query}</Card.Title>
                         <Card.Text>
                             {trendingSearch.articles[0].title}
-                        {/* {trendingSearch.articles.map((article,j) => {
-                       
-                                return <div key={j}>{article.source}</div>
-                                })} */}
+                         {trendingSearch.articles.map((article,j) => {
+                             return <div key={j}>
+                             <CarouselComponent id={j}
+                             titulo={article.title.query}
+                             imagen={article.image[imageUrl]}
+                             cuerpo={article.snippet}
+                             enlace={article.url}
+                             />
+                                </div>
+                                })} 
                         </Card.Text>
                         </Card.Body>
                             <Card.Link href={trendingSearch.shareUrl}>Ver</Card.Link>
